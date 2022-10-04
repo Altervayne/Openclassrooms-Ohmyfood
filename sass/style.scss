@@ -6,38 +6,63 @@
 @font-face {
     font-family: 'Roboto';
     src: url('./fonts/Roboto-Regular.ttf');
-    font-weight: normal;
+    font-weight: 400;
 }
 
 @font-face {
     font-family: 'Roboto';
     src: url('./fonts/Roboto-Bold.ttf');
-    font-weight: bold;
+    font-weight: 700;
 }
 
 @font-face {
     font-family: 'Roboto';
     src: url('./fonts/Roboto-Light.ttf');
-    font-weight: light;
+    font-weight: 200;
 }
 
 @font-face {
     font-family: 'Roboto';
     src: url('./fonts/Roboto-Black.ttf');
-    font-weight: bolder;
+    font-weight: 900;
 }
 
 $color-primary: #9356DC;
 $color-secondary: #FF79DA;
 $color-tertiary: #99E2D0;
 
+$background-primary: #f6f6f6;
+$background-secondary: #eaeaea;
+
+$ft-light: 200;
+$ft-normal: 400;
+$ft-bold: 700;
+$ft-black: 900;
+
+@mixin gradient-button {
+    color: white;
+    background: linear-gradient(170deg, $color-secondary 0%, $color-primary 100%);
+    border-radius: 75px;
+    font-weight: $ft-normal;
+    padding: 0 60px;
+}
+
+@mixin primary-shadow {
+    box-shadow: 0 10px 30px 1px rgba(0, 0, 0, .25);
+}
+
 p, h2, h3 {
     font-family: Roboto;
 }
 
+p {
+    font-size: 46px;
+    text-size-adjust: none;
+}
+
 h2, h3 {
-    font-size: 72px;
-    font-weight: bolder;
+    font-size: 56px;
+    font-weight: $ft-black;
 }
 
 html, body {
@@ -77,9 +102,9 @@ html, body {
     display: flex;
     align-items: center;
     font-size: 45px;
-    font-weight: bold;
+    font-weight: $ft-bold;
     color: #353535;
-    background-color: #eaeaea;
+    background-color: $background-secondary;
     width: 100%;
     padding: 45px 0;
     &__text {
@@ -96,9 +121,21 @@ html, body {
     display: flex;
     flex-direction: column;
     align-items: center;
-    background-color: #f6f6f6;
+    background-color: $background-primary;
+    text-align: center;
+    padding: 100px 0;
     &__title {
-        text-align: center;
+        padding: 0 10%;
+        margin: 0;
+    }
+    &__text {
+        font-weight: $ft-light;
+    }
+    &__btn {
+        @include gradient-button;
+        @include primary-shadow;
+        margin-top: 30px;
+        margin-bottom: 60px;
     }
 }
 
