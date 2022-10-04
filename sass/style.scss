@@ -104,6 +104,8 @@ main {
     flex-grow: 1;
 }
 
+        /* Début Section Explore */
+
 .section-explore {
     display: flex;
     flex-direction: column;
@@ -148,8 +150,31 @@ main {
         @include primary-shadow;
         margin-top: 30px;
         margin-bottom: 60px;
+        > p > a {
+            text-decoration: none;
+            color: white;
+        }
     }
 }
+
+        /* Fin Section Explore */
+
+        /* Début Section Tutoriel */
+
+.section-tutorial {
+    padding: 0 45px;
+}
+
+        /* Fin Section Tutoriel */
+
+        /* Début Section Restaurants */
+
+.section-restaurants {
+    padding: 0 45px;
+    background-color: $background-secondary;
+}
+
+        /* Fin Section Restaurants */
 
     /* Fin Main */
 
