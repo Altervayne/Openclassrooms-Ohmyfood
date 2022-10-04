@@ -28,8 +28,10 @@
 }
 
 $color-primary: #9356DC;
+$color-primary-bright: #f5edff;
 $color-secondary: #FF79DA;
 $color-tertiary: #99E2D0;
+$color-quaternary: #353535;
 
 $background-primary: #f6f6f6;
 $background-secondary: #eaeaea;
@@ -48,7 +50,15 @@ $ft-black: 900;
 }
 
 @mixin primary-shadow {
-    box-shadow: 0 10px 30px 1px rgba(0, 0, 0, .25);
+    box-shadow: 0 15px 40px 1px rgba(0, 0, 0, .15);
+}
+
+@mixin hovered-button {
+    transition: all .2s ease-in-out;
+    &:hover {
+        filter: brightness(110%) saturate(90%);
+        box-shadow: 0 20px 30px 1px rgba(0, 0, 0, .25)
+    }
 }
 
 p, h2, h3 {
@@ -61,7 +71,7 @@ p {
 }
 
 h2, h3 {
-    font-size: 68px;
+    font-size: 62px;
     font-weight: $ft-black;
 }
 
@@ -117,7 +127,7 @@ main {
     align-items: center;
     font-size: 45px;
     font-weight: $ft-bold;
-    color: #353535;
+    color: $color-quaternary;
     background-color: $background-secondary;
     width: 100%;
     padding: 45px 0;
@@ -139,7 +149,7 @@ main {
     text-align: center;
     padding: 100px 0;
     &__title {
-        padding: 0 10%;
+        padding: 0 13%;
         margin: 0;
     }
     &__text {
@@ -147,13 +157,14 @@ main {
     }
     &__btn {
         @include gradient-button;
-        @include primary-shadow;
+        box-shadow: 0 20px 30px 1px rgba(0, 0, 0, .2);
         margin-top: 30px;
         margin-bottom: 60px;
         > p > a {
             text-decoration: none;
             color: white;
         }
+        @include hovered-button
     }
 }
 
@@ -162,7 +173,66 @@ main {
         /* Début Section Tutoriel */
 
 .section-tutorial {
-    padding: 0 45px;
+    margin: 70px 0;
+    padding: 0 50px;
+}
+
+.tutorial-list {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    &__entry {
+        display: flex;
+        align-items: center;
+        min-width: 100%;
+    }
+    &__number-bubble {
+        z-index: 1;
+        position: relative;
+        left: 30px;
+        margin-left: -30px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-color: $color-primary;
+        color: white;
+        height: 65px;
+        width: 65px;
+        border-radius: 50%;
+        > p {
+            font-size: 230%;
+        }
+    }
+    &__card {
+        display: flex;
+        align-items: center;
+        background-color: $background-primary;
+        color: $color-quaternary;
+        font-weight: $ft-bold;
+        margin: 40px 0;
+        padding: 25px 0;
+        border-radius: 50px;
+        flex-grow: 1;
+        @include primary-shadow;
+        &__icon {
+            font-size: 50px;
+            max-width: 40px;
+            margin-right: 70px;
+            margin-left: 90px;
+            opacity: 75%;
+        }
+        &__text {
+            font-size: 42px;
+            color: black;
+        }
+        &__active {
+            background-color: $color-primary-bright;
+            color: $color-primary;
+            > i {
+                opacity: 100%;
+            }
+        }
+    }
 }
 
         /* Fin Section Tutoriel */
@@ -170,8 +240,9 @@ main {
         /* Début Section Restaurants */
 
 .section-restaurants {
-    padding: 0 45px;
-    background-color: $background-secondary;
+    margin-top: 60px;
+    padding: 110px 50px;
+    background-color: $background-primary;
 }
 
         /* Fin Section Restaurants */
@@ -187,7 +258,7 @@ main {
     bottom: 0;
     display: flex;
     flex-direction: column;
-    background-color: #424242;
+    background-color: $color-quaternary;
     color: white;
     padding: 70px;
     &__icon {
