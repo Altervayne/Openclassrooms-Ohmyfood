@@ -222,14 +222,60 @@ main {
 
 .menu-step {
     width: 100%;
+    &__title {
+        font-weight: $ft-normal;
+        font-size: 40px;
+    }
+    &__underline {
+        position: relative;
+        border-bottom: 8px solid $background-new;
+        width: 100px;
+        height: 0;
+        margin-top: -20px;
+    }
 }
 
 .menu-card {
     background-color: white;
     border-radius: 40px;
+    padding: 30px 0;
     margin: 40px 0;
     display: flex;
+    align-items: center;
     width: 100%;
+    @include primary-shadow;
+    &__text {
+        padding-left: 30px;
+        width: 80%;
+        display: flex;
+        flex-direction: column;
+        overflow: hidden;
+        white-space: nowrap;
+        &__dish {
+            font-size: 44px;
+            font-weight: $ft-bold;
+            margin: 0;
+            margin-bottom: 5px;
+        }
+        &__detail {
+            font-size: 36px;
+            font-weight: $ft-normal;
+            margin: 0;
+            margin-top: 5px;
+        }
+    }
+    &__price {
+        width: 20%;
+        display: flex;
+        justify-content: center;
+        > p {
+            font-size: 34px;
+            font-weight: $ft-bold;
+            color: $color-quaternary;
+            margin: 0;
+            margin-top: 42%;
+        }
+    }
 }
 
         /* Fin Section Menu */
