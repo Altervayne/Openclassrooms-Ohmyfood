@@ -32,9 +32,11 @@ $color-primary-bright: #f5edff;
 $color-secondary: #FF79DA;
 $color-tertiary: #99E2D0;
 $color-quaternary: #353535;
+$color-new: #008766;
 
 $background-primary: #f6f6f6;
 $background-secondary: #eaeaea;
+$background-new: #99e2d0;
 
 $ft-light: 200;
 $ft-normal: 400;
@@ -245,6 +247,80 @@ main {
     background-color: $background-primary;
 }
 
+.restaurant-card {
+    position: relative;
+    background-color: white;
+    border-radius: 40px;
+    @include primary-shadow;
+    margin: 50px 0;
+    &__image {
+        object-fit: cover;
+        width: 100%;
+        max-height: 450px;
+        border-top-left-radius: 40px;
+        border-top-right-radius: 40px;
+        object-position: 0 100%;
+        &__offset {
+            object-position: 0 62%;
+        }
+    }
+    &__new {
+        position: absolute;
+        background-color: $background-new;
+        border-radius: 7px;
+        left: 610px;
+        margin: 30px;
+        box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.15);
+        > p {
+            color: $color-new;
+            margin: 18px 35px;
+            font-size: 35px;
+            font-weight: $ft-bold;
+        }
+    }
+    &__info {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 0px 40px;
+        &__title {
+            font-size: 45px;
+            margin: 0;
+            padding-top: 35px;
+        }
+        &__location {
+            font-weight: $ft-light;
+            font-size: 40px;
+            margin: 0;
+            padding-top: 10px;
+            padding-bottom: 40px;
+        }
+    }
+    &__favourite {
+        position: absolute;
+        right: 40px;
+        font-size: 65px;
+        margin-right: 20px;
+        background-color: transparent;
+        font-weight: $ft-light;
+    }
+    &__favourited {
+        position: absolute;
+        right: 40px;
+        font-size: 65px;
+        margin-right: 20px;
+        color: transparent;
+        background: linear-gradient(335deg, $color-secondary 0%, $color-primary 100%);
+        -webkit-background-clip: text;
+        transition: opacity .2s ease-in-out;
+        z-index: 1;
+        opacity: 0%;
+        &:hover {
+            opacity: 100%;
+        }
+    }
+}
+
         /* Fin Section Restaurants */
 
     /* Fin Main */
@@ -289,3 +365,13 @@ main {
 }
 
     /* Fin Footer */
+
+
+
+    /* Début Media Queries */
+
+@media screen and (width: 992px) {
+    .header__heading {
+        width: 25%;
+    }
+}
