@@ -302,7 +302,6 @@ main {
         font-size: 65px;
         margin-right: 20px;
         background-color: transparent;
-        font-weight: $ft-light;
     }
     &__favourited {
         position: absolute;
@@ -370,8 +369,110 @@ main {
 
     /* Début Media Queries */
 
-@media screen and (width: 992px) {
-    .header__heading {
-        width: 25%;
+        /* Début MQ Tablette */
+
+@media (min-device-width: 768px) {
+
+    h2 {
+        font-size: 50px;
+        text-align: center;
     }
+
+    .header {
+        min-width: 100%;
+        &__heading {
+            min-width: 25%;
+        }
+    }
+
+    .location{
+        font-size: 40px;
+        &__text {
+            font-size: 40px;
+        }
+    }
+
+    .explore {
+        min-width: 100%;
+        &__title {
+            padding: 0 8%;
+        }
+        &__text {
+            padding: 0 8%;
+            font-size: 35px;
+        }
+        &__btn {
+            > p {
+                font-size: 30px;
+            }
+        }
+    }
+
+    .section-tutorial {
+        padding: 0 125px;
+    }
+
+    .tutorial-list {
+        &__card {
+            &__text{
+                font-size: 35px;
+            }
+        }
+    }
+
+    .section-restaurants {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        flex-wrap: wrap;
+        padding: 0 30px;
+        &__title {
+            min-width: 100%;
+        }
+    }
+
+    .restaurant-card {
+        width: 45%;
+        margin: 0 20px;
+        margin-bottom: 45px;
+        &__new {
+            left: 210px;
+            > p {
+                font-size: 25px;
+                margin: 10px 20px;
+            }
+        }
+        &__image {
+            max-height: 250px;
+        }
+        &__info {
+            &__title {
+                font-size: 30px;
+            }
+            &__location {
+                font-size: 25px;
+            }
+            > i {
+                font-size: 50px;
+                margin-right: 0;
+            }
+        }
+    }
+
+    .footer {
+        &__icon {
+            max-width: 20px;
+            font-size: 25px;
+        }
+        &__title {
+            margin-bottom: 50px;
+            width: 27%;
+        }
+        &__text {
+            font-size: 30px;
+        }
+    }
+
 }
+
+        /* Fin MQ Tablette */
