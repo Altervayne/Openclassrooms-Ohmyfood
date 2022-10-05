@@ -476,3 +476,129 @@ main {
 }
 
         /* Fin MQ Tablette */
+
+        /* Début MQ Desktop */
+
+@media (min-device-width: 992px) {
+
+    h2 {
+        font-size: 40px;
+    }
+
+    .header {
+        &__heading {
+            min-width: 20%;
+        }
+    }
+
+    .location{
+        font-size: 30px;
+        &__text {
+            font-size: 30px;
+        }
+        &__icon {
+            margin-left: 42%;
+        }
+    }
+
+    .explore {
+        min-width: 100%;
+        &__title {
+            padding: 0 8%;
+        }
+        &__text {
+            padding: 0 8%;
+            font-size: 25px;
+        }
+        &__btn {
+            > p {
+                font-size: 25px;
+            }
+        }
+    }
+
+    .section-tutorial {
+        margin-bottom: 0;
+    }
+
+    .tutorial-list {
+        flex-direction: row;
+        justify-content: space-between;
+        &__entry {
+            min-width: 30%;
+            margin: 0;
+            padding: 0;
+        }
+        &__card {
+            max-width: 90%;
+            &__text{
+                font-size: 20px;
+                margin: 0 0;
+            }
+            &__icon {
+                font-size: 25px;
+                margin-right: 25px;
+                margin-left: 50px;
+            }
+        }
+        &__number-bubble {
+            width: 40px;
+            height: 40px;
+            > p {
+                font-size: 25px;
+            }
+        }
+    }
+
+    .section-restaurants {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        flex-wrap: wrap;
+        padding: 0 30px;
+        &__title {
+            min-width: 100%;
+        }
+    }
+
+    .restaurant-card {
+        width: 30%;
+        &__new {
+            left: 370px;
+            > p {
+                font-size: 15px;
+            }
+        }
+        &__image {
+            max-height: 250px;
+        }
+        &__info {
+            &__title {
+                font-size: 25px;
+            }
+            &__location {
+                font-size: 20px;
+            }
+            > i {
+                font-size: 35px;
+                bottom: 70px;
+            }
+        }
+    }
+
+    .footer {
+        &__icon {
+            max-width: 10px;
+            font-size: 15px;
+        }
+        &__title {
+            width: 15%;
+        }
+        &__text {
+            font-size: 20px;
+        }
+    }
+
+}
+
+        
