@@ -243,8 +243,11 @@ main {
     display: flex;
     align-items: center;
     width: 100%;
+    max-height: 100px;
+    overflow: hidden;
     @include primary-shadow;
     &__text {
+        transition: width .3s ease-in-out;
         padding-left: 30px;
         width: 80%;
         display: flex;
@@ -274,6 +277,39 @@ main {
             color: $color-quaternary;
             margin: 0;
             margin-top: 42%;
+        }
+    }
+    &__validate {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        transition: width .3s ease-in-out;
+        width: 0%;
+        min-height: 160px;
+        border-top-right-radius: 40px;
+        border-bottom-right-radius: 40px;
+        background-color: $background-new;
+        &__circle {
+            background-color: white;
+            height: 60px;
+            width: 60px;
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            overflow: hidden;
+            color: $background-new;
+        }
+        &__icon {
+            font-size: 40px;
+        }
+    }
+    &:hover > .menu-card {
+        &__text {
+            width: 60%;
+        }
+        &__validate {
+            width: 20%;
         }
     }
 }
