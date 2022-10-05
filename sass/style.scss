@@ -63,6 +63,21 @@ $ft-black: 900;
     }
 }
 
+@mixin full-cover-link {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    z-index: 1;
+    cursor: pointer;
+}
+
+h1 {
+    font-family: Shrikhand;
+    text-size-adjust: none;
+}
+
 p, h2, h3 {
     font-family: Roboto;
     text-size-adjust: none;
@@ -101,6 +116,29 @@ body {
     z-index: 1;
     &__heading {
         min-width: 45%;
+        &-menu {
+            min-width: 45%;
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+    }
+
+}
+
+.nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    right: 40%;
+    margin-bottom: 10px;
+    &__icon {
+        font-size: 50px;
+        color: $color-quaternary;
+    }
+    &__homepage-link {
+        @include full-cover-link;
     }
 }
 
@@ -115,6 +153,50 @@ main {
     flex-direction: column;
     flex-grow: 1;
 }
+
+        /* Début Section Menu */
+
+.section-menu {
+    padding: 0 50px;
+    border-radius: 100px;
+    background-color: white;
+    margin-top: -100px;
+    &__head {
+        position: relative;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        > div {
+            display: flex;
+            align-items: center;
+            font-size: 65px;
+            margin-right: 100px;
+            };
+    }
+    &__title {
+        font-size: 70px;
+        font-weight: 100;
+    }
+    &__favourite {
+        position: absolute;
+        background-color: transparent;
+    }
+    &__favourited {
+        position: absolute;
+        color: transparent;
+        background: linear-gradient(335deg, $color-secondary 0%, $color-primary 100%);
+        -webkit-background-clip: text;
+        transition: opacity .2s ease-in-out;
+        z-index: 2;
+        opacity: 0%;
+        &:hover {
+            cursor: pointer;
+            opacity: 100%;
+        }
+    }
+}
+
+        /* Fin Section Menu */
 
         /* Début Section Explore */
 
@@ -312,11 +394,15 @@ main {
         background: linear-gradient(335deg, $color-secondary 0%, $color-primary 100%);
         -webkit-background-clip: text;
         transition: opacity .2s ease-in-out;
-        z-index: 1;
+        z-index: 2;
         opacity: 0%;
         &:hover {
+            cursor: pointer;
             opacity: 100%;
         }
+    }
+    &__link {
+        @include full-cover-link;
     }
 }
 
@@ -600,5 +686,3 @@ main {
     }
 
 }
-
-        
