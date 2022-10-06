@@ -242,12 +242,27 @@ main {
 
         /* Début Section Menu */
 
+.menu-main {
+    background-color: $background-secondary;
+    @include primary-shadow;
+}
+
+.menu-background-image {
+    object-fit: cover;
+    height: 725px;
+    &__offset {
+        object-position: 0 70%;
+    }
+}
+
 .section-menu {
+    @include primary-shadow;
     display: flex;
     flex-direction: column;
     align-items: center;
     padding: 0 50px;
-    border-radius: 100px;
+    border-top-left-radius: 100px;
+    border-top-right-radius: 100px;
     background-color: $background-primary;
     margin-top: -100px;
     &__head {
@@ -313,22 +328,19 @@ main {
     animation: ease-out 0s 1 slideAndFadeIn;
     background-color: white;
     border-radius: 40px;
-    padding: 30px 0;
     margin: 40px 0;
     display: flex;
     align-items: center;
     width: 100%;
-    max-height: 100px;
     overflow: hidden;
     @include primary-shadow;
     &__text {
+        margin: 30px 0;
         transition: width .3s ease-in-out;
         padding-left: 30px;
         width: 80%;
         display: flex;
         flex-direction: column;
-        overflow: hidden;
-        white-space: nowrap;
         &__dish {
             font-size: 44px;
             font-weight: $ft-bold;
@@ -340,9 +352,13 @@ main {
             font-weight: $ft-normal;
             margin: 0;
             margin-top: 5px;
+            overflow: hidden;
+            white-space: nowrap;
+            text-overflow: ellipsis;
         }
     }
     &__price {
+        margin: 10px 0;
         width: 20%;
         display: flex;
         justify-content: center;
@@ -360,7 +376,7 @@ main {
         align-items: center;
         transition: width .3s ease-in-out;
         width: 0%;
-        min-height: 160px;
+        align-self: stretch;
         border-top-right-radius: 40px;
         border-bottom-right-radius: 40px;
         background-color: $background-new;
@@ -395,9 +411,15 @@ main {
     }
 }
 
-@for $i from 1 through 3 {
-    .menu-step > div:nth-child(#{$i}n) {
-        animation-duration: #{$i * 0.4}s;
+@for $i from 2 through 6 {
+    .menu-step-animate__four > div:nth-child(#{$i}) {
+        animation-duration: #{$i * 0.2}s;
+    }
+}
+
+@for $i from 2 through 5 {
+    .menu-step-animate__three > div:nth-child(#{$i}) {
+        animation-duration: #{$i * 0.2}s;
     }
 }
 
@@ -689,6 +711,71 @@ main {
         }
     }
 
+    .menu-main {
+        display: flex;
+        align-items: center;
+    }
+
+    .menu-background-image {
+        object-fit: cover;
+        min-width: 100%;
+        max-height: 600px;
+    }
+
+    .section-menu {
+        width: 70%;
+        &__title {
+            font-size: 45px;
+        }
+        &__favourite {
+            font-size: 45px;
+        }
+        &__favourited {
+            font-size: 45px;
+        }
+        &__head > div{
+            margin-right: 60px;
+        }
+    }
+
+    .menu-step {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        &__title {
+            font-size: 30px;
+        }
+        &__underline {
+            border-width: 5px;
+        }
+    }
+
+    .menu-card {
+        margin: 15px 0;
+        &__text {
+            &__dish {
+                font-size: 28px;
+            }
+            &__detail {
+                font-size: 26px;
+            }
+        }
+        &__price {
+            > p {
+                font-size: 24px;
+            }
+        }
+        &__validate {
+            &__circle {
+                height: 40px;
+                width: 40px;
+            }
+            &__icon {
+                font-size: 25px;
+            }
+        }
+    }
+
     .section-tutorial {
         padding: 0 125px;
     }
@@ -766,9 +853,16 @@ main {
         font-size: 40px;
     }
 
+    .nav {
+        right: 45%;
+        &__icon {
+            font-size: 35px;
+        }
+    }
+
     .header {
         &__heading {
-            min-width: 20%;
+            min-width: 15%;
         }
     }
 
@@ -796,6 +890,54 @@ main {
     .base-btn {
         > p {
             font-size: 25px;
+        }
+    }
+
+    .menu-main {
+        width: 100%;
+    }
+
+    .section-menu {
+        border-radius: 0;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-around;
+        align-items: flex-start;
+        width: 100%;
+        padding: 0;
+        &__head {
+            width: 90%;
+        }
+        &__order {
+            font-size: 22px;
+        }
+    }
+
+    .menu-step {
+        width: 30%;
+        &__title {
+            font-size: 24px;
+            margin-bottom: 5px;
+        }
+        &__underline {
+            border-width: 2px;
+            margin: 5px 0;
+            width: 250px;
+        }
+    }
+
+    .menu-card {
+        padding: 0;
+        &__text {
+            &__dish {
+                font-size: 20px;
+            }
+            &__detail {
+                font-size: 16px;
+            }
+        }
+        &__price > p {
+            font-size: 24px;
         }
     }
 
