@@ -290,7 +290,7 @@ main {
         position: absolute;
         color: transparent;
         background: linear-gradient(335deg, $color-secondary 0%, $color-primary 100%);
-        -webkit-background-clip: text;
+        background-clip: text;
         transition: opacity .2s ease-in-out;
         z-index: 2;
         opacity: 0%;
@@ -608,7 +608,7 @@ main {
         margin-right: 20px;
         color: transparent;
         background: linear-gradient(335deg, $color-secondary 0%, $color-primary 100%);
-        -webkit-background-clip: text;
+        background-clip: text;
         transition: opacity .2s ease-in-out;
         z-index: 2;
         opacity: 0%;
