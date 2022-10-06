@@ -804,7 +804,7 @@ main {
         margin: 0 20px;
         margin-bottom: 45px;
         &__new {
-            left: 210px;
+            left: 0;
             > p {
                 font-size: 25px;
                 margin: 10px 20px;
@@ -847,7 +847,7 @@ main {
 
         /* Début MQ Desktop */
 
-@media (min-device-width: 992px) {
+@media (min-device-width: 1200px) {
 
     h2 {
         font-size: 40px;
@@ -872,7 +872,8 @@ main {
             font-size: 30px;
         }
         &__icon {
-            margin-left: 42%;
+            margin-left: 39%;
+            margin-right: 100px;
         }
     }
 
@@ -988,13 +989,13 @@ main {
     .restaurant-card {
         width: 30%;
         &__new {
-            left: 370px;
+            left: 0;
             > p {
                 font-size: 15px;
             }
         }
         &__image {
-            max-height: 250px;
+            max-height: 190px;
         }
         &__info {
             &__title {

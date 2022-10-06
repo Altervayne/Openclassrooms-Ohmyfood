@@ -806,7 +806,7 @@ main {
     margin-bottom: 45px;
   }
   .restaurant-card__new {
-    left: 210px;
+    left: 0;
   }
   .restaurant-card__new > p {
     font-size: 25px;
@@ -839,7 +839,7 @@ main {
 }
 /* Fin MQ Tablette */
 /* Début MQ Desktop */
-@media (min-device-width: 992px) {
+@media (min-device-width: 1200px) {
   h2 {
     font-size: 40px;
   }
@@ -859,7 +859,8 @@ main {
     font-size: 30px;
   }
   .location__icon {
-    margin-left: 42%;
+    margin-left: 39%;
+    margin-right: 100px;
   }
   .explore {
     min-width: 100%;
@@ -961,13 +962,13 @@ main {
     width: 30%;
   }
   .restaurant-card__new {
-    left: 370px;
+    left: 0;
   }
   .restaurant-card__new > p {
     font-size: 15px;
   }
   .restaurant-card__image {
-    max-height: 250px;
+    max-height: 190px;
   }
   .restaurant-card__info__title {
     font-size: 25px;
