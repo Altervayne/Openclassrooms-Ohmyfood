@@ -120,11 +120,11 @@ p, h2, h3 {
 }
 
 p {
-  font-size: 46px;
+  font-size: 18px;
 }
 
 h2, h3 {
-  font-size: 62px;
+  font-size: 25px;
   font-weight: 900;
 }
 
@@ -145,14 +145,19 @@ body {
   background: linear-gradient(170deg, #FF79DA 0%, #9356DC 100%);
   border-radius: 75px;
   font-weight: 400;
-  padding: 0 60px;
+  padding: 0 20px;
   box-shadow: 0 20px 30px 1px rgba(0, 0, 0, 0.2);
-  margin-top: 30px;
-  margin-bottom: 60px;
+  margin-top: 20px;
+  margin-bottom: 30px;
   transition: all 0.2s ease-in-out;
+}
+.base-btn > p {
+  margin: 0;
+  padding: 15px 0;
 }
 .base-btn > p > a {
   text-decoration: none;
+  font-size: 16px;
   color: white;
 }
 .base-btn:hover {
@@ -179,7 +184,7 @@ body {
   -webkit-animation: 3s ease-in-out 1 rotatingSpinner;
           animation: 3s ease-in-out 1 rotatingSpinner;
   align-self: center;
-  font-size: 172px;
+  font-size: 120px;
   width: auto;
   height: auto;
   color: #9356DC;
@@ -189,17 +194,17 @@ body {
 /* Fin Loading */
 /* Début Header */
 .header {
-  box-shadow: 0 0 10px 5px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 0 8px 2px rgba(0, 0, 0, 0.15);
   display: flex;
   align-items: center;
   justify-content: center;
-  padding-top: 60px;
-  padding-bottom: 40px;
+  padding-top: 30px;
+  padding-bottom: 15px;
   position: relative;
   z-index: 1;
 }
 .header__heading {
-  min-width: 45%;
+  width: 45%;
 }
 .header__heading-menu {
   min-width: 45%;
@@ -217,7 +222,7 @@ body {
   margin-bottom: 10px;
 }
 .nav__icon {
-  font-size: 50px;
+  font-size: 12px;
   color: #353535;
 }
 .nav__homepage-link {
@@ -241,7 +246,7 @@ main {
 /* Début Section Menu */
 .menu-main {
   background-color: #eaeaea;
-  box-shadow: 0 15px 40px 1px rgba(0, 0, 0, 0.15);
+  box-shadow: 0 5px 10px 1px rgba(0, 0, 0, 0.1);
 }
 
 .menu-background-image {
@@ -255,7 +260,7 @@ main {
 }
 
 .section-menu {
-  box-shadow: 0 15px 40px 1px rgba(0, 0, 0, 0.15);
+  box-shadow: 0 5px 10px 1px rgba(0, 0, 0, 0.1);
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -275,11 +280,11 @@ main {
 .section-menu__head > div {
   display: flex;
   align-items: center;
-  font-size: 65px;
+  font-size: 12px;
   margin-right: 100px;
 }
 .section-menu__title {
-  font-size: 70px;
+  font-size: 12px;
   font-weight: 100;
 }
 .section-menu__favourite {
@@ -302,7 +307,7 @@ main {
 }
 .section-menu__order {
   padding: 0 75px;
-  font-size: 45px;
+  font-size: 12px;
 }
 .section-menu > .base-btn {
   margin-top: 100px;
@@ -314,7 +319,7 @@ main {
 }
 .menu-step__title {
   font-weight: 400;
-  font-size: 40px;
+  font-size: 12px;
 }
 .menu-step__underline {
   position: relative;
@@ -334,7 +339,7 @@ main {
   align-items: center;
   width: 100%;
   overflow: hidden;
-  box-shadow: 0 15px 40px 1px rgba(0, 0, 0, 0.15);
+  box-shadow: 0 5px 10px 1px rgba(0, 0, 0, 0.1);
 }
 .menu-card__text {
   margin: 30px 0;
@@ -345,13 +350,13 @@ main {
   flex-direction: column;
 }
 .menu-card__text__dish {
-  font-size: 44px;
+  font-size: 12px;
   font-weight: 700;
   margin: 0;
   margin-bottom: 5px;
 }
 .menu-card__text__detail {
-  font-size: 36px;
+  font-size: 12px;
   font-weight: 400;
   margin: 0;
   margin-top: 5px;
@@ -366,7 +371,7 @@ main {
   justify-content: center;
 }
 .menu-card__price > p {
-  font-size: 34px;
+  font-size: 12px;
   font-weight: 700;
   color: #353535;
   margin: 0;
@@ -466,14 +471,14 @@ main {
 .location {
   display: flex;
   align-items: center;
-  font-size: 45px;
   font-weight: 700;
   color: #353535;
   background-color: #eaeaea;
   width: 100%;
-  padding: 45px 0;
+  padding: 20px 0;
 }
 .location__text {
+  font-size: 16px;
   position: absolute;
   left: 50%;
   transform: translateX(-50%);
@@ -488,7 +493,8 @@ main {
   align-items: center;
   background-color: #f6f6f6;
   text-align: center;
-  padding: 100px 0;
+  padding: 40px 0;
+  min-width: 100%;
 }
 .explore__title {
   padding: 0 13%;
@@ -502,7 +508,7 @@ main {
 /* Début Section Tutoriel */
 .section-tutorial {
   margin: 70px 0;
-  padding: 0 50px;
+  padding: 0 20px;
 }
 
 .tutorial-list {
@@ -518,19 +524,19 @@ main {
 .tutorial-list__number-bubble {
   z-index: 1;
   position: relative;
-  left: 30px;
-  margin-left: -30px;
+  left: 12.5px;
+  margin-left: -12.5px;
   display: flex;
   align-items: center;
   justify-content: center;
   background-color: #9356DC;
   color: white;
-  height: 65px;
-  width: 65px;
+  height: 25px;
+  width: 25px;
   border-radius: 50%;
 }
 .tutorial-list__number-bubble > p {
-  font-size: 230%;
+  font-size: 100%;
 }
 .tutorial-list__card {
   display: flex;
@@ -538,21 +544,21 @@ main {
   background-color: #f6f6f6;
   color: #353535;
   font-weight: 700;
-  margin: 40px 0;
-  padding: 25px 0;
-  border-radius: 50px;
+  margin: 15px 0;
+  padding: 12px 0;
+  border-radius: 30px;
   flex-grow: 1;
-  box-shadow: 0 15px 40px 1px rgba(0, 0, 0, 0.15);
+  box-shadow: 0 5px 10px 1px rgba(0, 0, 0, 0.1);
 }
 .tutorial-list__card__icon {
-  font-size: 50px;
-  max-width: 40px;
-  margin-right: 70px;
-  margin-left: 90px;
+  font-size: 20px;
+  max-width: 20px;
+  margin-right: 8%;
+  margin-left: 10%;
   opacity: 75%;
 }
 .tutorial-list__card__text {
-  font-size: 42px;
+  font-size: 17px;
   color: black;
 }
 .tutorial-list__card__active {
@@ -566,25 +572,25 @@ main {
 /* Fin Section Tutoriel */
 /* Début Section Restaurants */
 .section-restaurants {
-  margin-top: 60px;
-  padding: 110px 50px;
+  margin-top: 10px;
+  padding: 35px 20px;
   background-color: #f6f6f6;
 }
 
 .restaurant-card {
   position: relative;
   background-color: white;
-  border-radius: 40px;
-  box-shadow: 0 15px 40px 1px rgba(0, 0, 0, 0.15);
-  margin: 50px 0;
+  border-radius: 20px;
+  box-shadow: 0 5px 10px 1px rgba(0, 0, 0, 0.1);
+  margin: 25px 0;
 }
 .restaurant-card__image {
   -o-object-fit: cover;
      object-fit: cover;
   width: 100%;
-  max-height: 450px;
-  border-top-left-radius: 40px;
-  border-top-right-radius: 40px;
+  max-height: 180px;
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
   -o-object-position: 0 100%;
      object-position: 0 100%;
 }
@@ -595,46 +601,46 @@ main {
 .restaurant-card__new {
   position: absolute;
   background-color: #99e2d0;
-  border-radius: 7px;
-  left: 610px;
-  margin: 30px;
+  border-radius: 4px;
+  right: 3%;
+  margin: 15px;
   box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.15);
 }
 .restaurant-card__new > p {
   color: #008766;
-  margin: 18px 35px;
-  font-size: 35px;
+  margin: 6px 10px;
+  font-size: 14px;
   font-weight: 700;
 }
 .restaurant-card__info {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 0px 40px;
+  padding: 0px 10px;
 }
 .restaurant-card__info__title {
-  font-size: 45px;
+  font-size: 20px;
   margin: 0;
-  padding-top: 35px;
+  padding-top: 15px;
 }
 .restaurant-card__info__location {
   font-weight: 200;
-  font-size: 40px;
+  font-size: 18px;
   margin: 0;
-  padding-top: 10px;
-  padding-bottom: 40px;
+  padding-top: 0;
+  padding-bottom: 15px;
 }
 .restaurant-card__favourite {
   position: absolute;
-  right: 40px;
-  font-size: 65px;
+  right: 10px;
+  font-size: 26px;
   margin-right: 20px;
   background-color: transparent;
 }
 .restaurant-card__favourited {
   position: absolute;
-  right: 40px;
-  font-size: 65px;
+  right: 10px;
+  font-size: 26px;
   margin-right: 20px;
   color: transparent;
   background: linear-gradient(335deg, #FF79DA 0%, #9356DC 100%);
@@ -668,12 +674,12 @@ main {
   flex-direction: column;
   background-color: #353535;
   color: white;
-  padding: 70px;
+  padding: 20px;
 }
 .footer__icon {
-  margin-right: 30px;
-  max-width: 25px;
-  font-size: 30px;
+  margin-right: 12px;
+  max-width: 10px;
+  font-size: 13px;
 }
 .footer__iconlink {
   display: flex;
@@ -682,7 +688,7 @@ main {
 }
 .footer__title {
   filter: invert(100%);
-  margin-bottom: 50px;
+  margin-bottom: 20px;
   width: 33%;
 }
 .footer__link {
@@ -690,31 +696,31 @@ main {
   color: white;
 }
 .footer__text {
-  margin: 10px 0;
+  margin: 4px 0;
   padding: 0;
   font-weight: lighter;
-  font-size: 40px;
+  font-size: 16px;
 }
 
 /* Fin Footer */
 /* Début Media Queries */
 /* Début MQ Tablette */
-@media (min-device-width: 768px) {
+@media (min-width: 768px) {
   h2 {
-    font-size: 50px;
+    font-size: 28px;
     text-align: center;
   }
   .header {
     min-width: 100%;
   }
   .header__heading {
-    min-width: 25%;
+    width: 25%;
   }
   .location {
-    font-size: 40px;
+    font-size: 24px;
   }
   .location__text {
-    font-size: 40px;
+    font-size: 24px;
   }
   .explore {
     min-width: 100%;
@@ -724,10 +730,13 @@ main {
   }
   .explore__text {
     padding: 0 8%;
-    font-size: 35px;
+    font-size: 22px;
   }
   .base-btn > p {
-    font-size: 30px;
+    display: flex;
+  }
+  .base-btn > p > a {
+    font-size: 18px;
   }
   .menu-main {
     display: flex;
@@ -785,10 +794,10 @@ main {
     font-size: 25px;
   }
   .section-tutorial {
-    padding: 0 125px;
+    padding: 0 100px;
   }
   .tutorial-list__card__text {
-    font-size: 35px;
+    font-size: 20px;
   }
   .section-restaurants {
     display: flex;
@@ -802,46 +811,42 @@ main {
   }
   .restaurant-card {
     width: 45%;
-    margin: 0 20px;
+    margin: 0 10px;
     margin-bottom: 45px;
   }
-  .restaurant-card__new {
-    left: 0;
-  }
   .restaurant-card__new > p {
-    font-size: 25px;
-    margin: 10px 20px;
+    font-size: 14px;
   }
   .restaurant-card__image {
-    max-height: 250px;
+    max-height: 200px;
   }
   .restaurant-card__info__title {
-    font-size: 30px;
+    font-size: 1.3em;
   }
   .restaurant-card__info__location {
-    font-size: 25px;
+    font-size: 1.2em;
   }
   .restaurant-card__info > i {
-    font-size: 50px;
+    font-size: 28px;
     margin-right: 0;
   }
   .footer__icon {
-    max-width: 20px;
-    font-size: 25px;
+    max-width: 13px;
+    font-size: 18px;
   }
   .footer__title {
-    margin-bottom: 50px;
-    width: 27%;
+    margin-bottom: 25px;
+    width: 25%;
   }
   .footer__text {
-    font-size: 30px;
+    font-size: 20px;
   }
 }
 /* Fin MQ Tablette */
 /* Début MQ Desktop */
-@media (min-device-width: 1200px) {
+@media (min-width: 992px) {
   h2 {
-    font-size: 40px;
+    font-size: 30px;
   }
   .nav {
     right: 45%;
@@ -850,17 +855,19 @@ main {
     font-size: 35px;
   }
   .header__heading {
-    min-width: 15%;
+    min-width: 10%;
+    max-width: 15%;
   }
   .location {
+    justify-content: space-around;
     font-size: 30px;
   }
   .location__text {
     font-size: 30px;
   }
   .location__icon {
-    margin-left: 39%;
-    margin-right: 100px;
+    margin-left: 0;
+    margin-right: 25%;
   }
   .explore {
     min-width: 100%;
@@ -873,7 +880,7 @@ main {
     font-size: 25px;
   }
   .base-btn > p {
-    font-size: 25px;
+    font-size: 26px;
   }
   .menu-main {
     width: 100%;
@@ -918,7 +925,10 @@ main {
     font-size: 24px;
   }
   .section-tutorial {
-    margin-bottom: 0;
+    margin-bottom: 50px;
+  }
+  .section-tutorial__title {
+    margin-bottom: 40px;
   }
   .tutorial-list {
     flex-direction: row;
@@ -926,15 +936,17 @@ main {
   }
   .tutorial-list__entry {
     min-width: 30%;
+    height: 60px;
     margin: 0;
     padding: 0;
   }
   .tutorial-list__card {
     max-width: 90%;
+    min-height: 100%;
   }
   .tutorial-list__card__text {
     font-size: 20px;
-    margin: 0 0;
+    margin: 0 10px;
   }
   .tutorial-list__card__icon {
     font-size: 25px;
@@ -942,11 +954,11 @@ main {
     margin-left: 50px;
   }
   .tutorial-list__number-bubble {
-    width: 40px;
-    height: 40px;
+    width: 30px;
+    height: 30px;
   }
   .tutorial-list__number-bubble > p {
-    font-size: 25px;
+    font-size: 100%;
   }
   .section-restaurants {
     display: flex;
@@ -956,29 +968,31 @@ main {
     padding: 0 30px;
   }
   .section-restaurants__title {
+    margin: 50px 0;
     min-width: 100%;
   }
   .restaurant-card {
     width: 30%;
   }
-  .restaurant-card__new {
-    left: 0;
-  }
-  .restaurant-card__new > p {
-    font-size: 15px;
-  }
   .restaurant-card__image {
-    max-height: 190px;
+    max-height: 180px;
+  }
+  .restaurant-card__info {
+    margin-left: 10px;
   }
   .restaurant-card__info__title {
-    font-size: 25px;
-  }
-  .restaurant-card__info__location {
     font-size: 20px;
   }
+  .restaurant-card__info__location {
+    font-size: 18px;
+  }
   .restaurant-card__info > i {
-    font-size: 35px;
-    bottom: 70px;
+    font-size: 25px;
+    margin-right: 15px;
+    bottom: 15%;
+  }
+  .footer {
+    padding: 40px;
   }
   .footer__icon {
     max-width: 10px;

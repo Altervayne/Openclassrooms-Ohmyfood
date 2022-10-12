@@ -48,11 +48,11 @@ $ft-black: 900;
     background: linear-gradient(170deg, $color-secondary 0%, $color-primary 100%);
     border-radius: 75px;
     font-weight: $ft-normal;
-    padding: 0 60px;
+    padding: 0 20px;
 }
 
 @mixin primary-shadow {
-    box-shadow: 0 15px 40px 1px rgba(0, 0, 0, .15);
+    box-shadow: 0 5px 10px 1px rgba(0, 0, 0, .1);
 }
 
 @mixin hovered-button {
@@ -128,11 +128,11 @@ p, h2, h3 {
 }
 
 p {
-    font-size: 46px;
+    font-size: 18px;
 }
 
 h2, h3 {
-    font-size: 62px;
+    font-size: 25px;
     font-weight: $ft-black;
 }
 
@@ -151,10 +151,15 @@ body {
 .base-btn {
     @include gradient-button;
     box-shadow: 0 20px 30px 1px rgba(0, 0, 0, .2);
-    margin-top: 30px;
-    margin-bottom: 60px;
+    margin-top: 20px;
+    margin-bottom: 30px;
+    > p {
+        margin: 0;
+        padding: 15px 0;
+    }
     > p > a {
         text-decoration: none;
+        font-size: 16px;
         color: white;
     }
     @include hovered-button
@@ -177,7 +182,7 @@ body {
     &__spinner {
         animation: 3s ease-in-out 1 rotatingSpinner;
         align-self: center;
-        font-size: 172px;
+        font-size: 120px;
         width: auto;
         height: auto;
         color: $color-primary;
@@ -192,16 +197,16 @@ body {
     /* Début Header */
 
 .header {
-    box-shadow: 0 0 10px 5px rgba(0, 0, 0, .2);
+    box-shadow: 0 0 8px 2px rgba(0, 0, 0, .15);
     display: flex;
     align-items: center;
     justify-content: center;
-    padding-top: 60px;
-    padding-bottom: 40px;
+    padding-top: 30px;
+    padding-bottom: 15px;
     position: relative;
     z-index: 1;
     &__heading {
-        min-width: 45%;
+        width: 45%;
         &-menu {
             min-width: 45%;
             position: absolute;
@@ -220,7 +225,7 @@ body {
     right: 40%;
     margin-bottom: 10px;
     &__icon {
-        font-size: 50px;
+        font-size: 12px;
         color: $color-quaternary;
     }
     &__homepage-link {
@@ -274,12 +279,12 @@ main {
         > div {
             display: flex;
             align-items: center;
-            font-size: 65px;
+            font-size: 12px;
             margin-right: 100px;
             };
     }
     &__title {
-        font-size: 70px;
+        font-size: 12px;
         font-weight: 100;
     }
     &__favourite {
@@ -301,7 +306,7 @@ main {
     }
     &__order {
         padding: 0 75px;
-        font-size: 45px;
+        font-size: 12px;
     }
     > .base-btn {
         margin-top: 100px;
@@ -313,7 +318,7 @@ main {
     width: 100%;
     &__title {
         font-weight: $ft-normal;
-        font-size: 40px;
+        font-size: 12px;
     }
     &__underline {
         position: relative;
@@ -342,13 +347,13 @@ main {
         display: flex;
         flex-direction: column;
         &__dish {
-            font-size: 44px;
+            font-size: 12px;
             font-weight: $ft-bold;
             margin: 0;
             margin-bottom: 5px;
         }
         &__detail {
-            font-size: 36px;
+            font-size: 12px;
             font-weight: $ft-normal;
             margin: 0;
             margin-top: 5px;
@@ -363,7 +368,7 @@ main {
         display: flex;
         justify-content: center;
         > p {
-            font-size: 34px;
+            font-size: 12px;
             font-weight: $ft-bold;
             color: $color-quaternary;
             margin: 0;
@@ -436,13 +441,13 @@ main {
 .location {
     display: flex;
     align-items: center;
-    font-size: 45px;
     font-weight: $ft-bold;
     color: $color-quaternary;
     background-color: $background-secondary;
     width: 100%;
-    padding: 45px 0;
+    padding: 20px 0;
     &__text {
+        font-size: 16px;
         position: absolute;
         left: 50%;
         transform: translateX(-50%);
@@ -458,7 +463,8 @@ main {
     align-items: center;
     background-color: $background-primary;
     text-align: center;
-    padding: 100px 0;
+    padding: 40px 0;
+    min-width: 100%;
     &__title {
         padding: 0 13%;
         margin: 0;
@@ -474,7 +480,7 @@ main {
 
 .section-tutorial {
     margin: 70px 0;
-    padding: 0 50px;
+    padding: 0 20px;
 }
 
 .tutorial-list {
@@ -489,18 +495,18 @@ main {
     &__number-bubble {
         z-index: 1;
         position: relative;
-        left: 30px;
-        margin-left: -30px;
+        left: 12.5px;
+        margin-left: -12.5px;
         display: flex;
         align-items: center;
         justify-content: center;
         background-color: $color-primary;
         color: white;
-        height: 65px;
-        width: 65px;
+        height: 25px;
+        width: 25px;
         border-radius: 50%;
         > p {
-            font-size: 230%;
+            font-size: 100%;
         }
     }
     &__card {
@@ -509,20 +515,20 @@ main {
         background-color: $background-primary;
         color: $color-quaternary;
         font-weight: $ft-bold;
-        margin: 40px 0;
-        padding: 25px 0;
-        border-radius: 50px;
+        margin: 15px 0;
+        padding: 12px 0;
+        border-radius: 30px;
         flex-grow: 1;
         @include primary-shadow;
         &__icon {
-            font-size: 50px;
-            max-width: 40px;
-            margin-right: 70px;
-            margin-left: 90px;
+            font-size: 20px;
+            max-width: 20px;
+            margin-right: 8%;
+            margin-left: 10%;
             opacity: 75%;
         }
         &__text {
-            font-size: 42px;
+            font-size: 17px;
             color: black;
         }
         &__active {
@@ -540,23 +546,23 @@ main {
         /* Début Section Restaurants */
 
 .section-restaurants {
-    margin-top: 60px;
-    padding: 110px 50px;
+    margin-top: 10px;
+    padding: 35px 20px;
     background-color: $background-primary;
 }
 
 .restaurant-card {
     position: relative;
     background-color: white;
-    border-radius: 40px;
+    border-radius: 20px;
     @include primary-shadow;
-    margin: 50px 0;
+    margin: 25px 0;
     &__image {
         object-fit: cover;
         width: 100%;
-        max-height: 450px;
-        border-top-left-radius: 40px;
-        border-top-right-radius: 40px;
+        max-height: 180px;
+        border-top-left-radius: 20px;
+        border-top-right-radius: 20px;
         object-position: 0 100%;
         &__offset {
             object-position: 0 62%;
@@ -565,14 +571,14 @@ main {
     &__new {
         position: absolute;
         background-color: $background-new;
-        border-radius: 7px;
-        left: 610px;
-        margin: 30px;
+        border-radius: 4px;
+        right: 3%;
+        margin: 15px;
         box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.15);
         > p {
             color: $color-new;
-            margin: 18px 35px;
-            font-size: 35px;
+            margin: 6px 10px;
+            font-size: 14px;
             font-weight: $ft-bold;
         }
     }
@@ -580,31 +586,31 @@ main {
         display: flex;
         align-items: center;
         justify-content: space-between;
-        padding: 0px 40px;
+        padding: 0px 10px;
         &__title {
-            font-size: 45px;
+            font-size: 20px;
             margin: 0;
-            padding-top: 35px;
+            padding-top: 15px;
         }
         &__location {
             font-weight: $ft-light;
-            font-size: 40px;
+            font-size: 18px;
             margin: 0;
-            padding-top: 10px;
-            padding-bottom: 40px;
+            padding-top: 0;
+            padding-bottom: 15px;
         }
     }
     &__favourite {
         position: absolute;
-        right: 40px;
-        font-size: 65px;
+        right: 10px;
+        font-size: 26px;
         margin-right: 20px;
         background-color: transparent;
     }
     &__favourited {
         position: absolute;
-        right: 40px;
-        font-size: 65px;
+        right: 10px;
+        font-size: 26px;
         margin-right: 20px;
         color: transparent;
         background: linear-gradient(335deg, $color-secondary 0%, $color-primary 100%);
@@ -637,11 +643,11 @@ main {
     flex-direction: column;
     background-color: $color-quaternary;
     color: white;
-    padding: 70px;
+    padding: 20px;
     &__icon {
-        margin-right: 30px;
-        max-width: 25px;
-        font-size: 30px;
+        margin-right: 12px;
+        max-width: 10px;
+        font-size: 13px;
     }
     &__iconlink {
         display: flex;
@@ -650,7 +656,7 @@ main {
     }
     &__title {
         filter: invert(100%);
-        margin-bottom: 50px;
+        margin-bottom: 20px;
         width: 33%;
     }
     &__link {
@@ -658,10 +664,10 @@ main {
         color: white;
     }
     &__text {
-        margin: 10px 0;
+        margin: 4px 0;
         padding: 0;
         font-weight: lighter;
-        font-size: 40px;
+        font-size: 16px;
     }
 }
 
@@ -673,24 +679,24 @@ main {
 
         /* Début MQ Tablette */
 
-@media (min-device-width: 768px) {
+@media (min-width: 768px) {
 
     h2 {
-        font-size: 50px;
+        font-size: 28px;
         text-align: center;
     }
 
     .header {
         min-width: 100%;
         &__heading {
-            min-width: 25%;
+            width: 25%;
         }
     }
 
     .location{
-        font-size: 40px;
+        font-size: 24px;
         &__text {
-            font-size: 40px;
+            font-size: 24px;
         }
     }
 
@@ -701,13 +707,16 @@ main {
         }
         &__text {
             padding: 0 8%;
-            font-size: 35px;
+            font-size: 22px;
         }
     }
 
     .base-btn {
         > p {
-            font-size: 30px;
+            display: flex;
+            > a {
+                font-size: 18px;
+            }
         }
     }
 
@@ -777,13 +786,13 @@ main {
     }
 
     .section-tutorial {
-        padding: 0 125px;
+        padding: 0 100px;
     }
 
     .tutorial-list {
         &__card {
             &__text{
-                font-size: 35px;
+                font-size: 20px;
             }
         }
     }
@@ -801,27 +810,25 @@ main {
 
     .restaurant-card {
         width: 45%;
-        margin: 0 20px;
+        margin: 0 10px;
         margin-bottom: 45px;
         &__new {
-            left: 0;
             > p {
-                font-size: 25px;
-                margin: 10px 20px;
+                font-size: 14px;
             }
         }
         &__image {
-            max-height: 250px;
+            max-height: 200px;
         }
         &__info {
             &__title {
-                font-size: 30px;
+                font-size: 1.3em;
             }
             &__location {
-                font-size: 25px;
+                font-size: 1.2em;
             }
             > i {
-                font-size: 50px;
+                font-size: 28px;
                 margin-right: 0;
             }
         }
@@ -829,15 +836,15 @@ main {
 
     .footer {
         &__icon {
-            max-width: 20px;
-            font-size: 25px;
+            max-width: 13px;
+            font-size: 18px;
         }
         &__title {
-            margin-bottom: 50px;
-            width: 27%;
+            margin-bottom: 25px;
+            width: 25%;
         }
         &__text {
-            font-size: 30px;
+            font-size: 20px;
         }
     }
 
@@ -847,10 +854,10 @@ main {
 
         /* Début MQ Desktop */
 
-@media (min-device-width: 1200px) {
+@media (min-width: 992px) {
 
     h2 {
-        font-size: 40px;
+        font-size: 30px;
     }
 
     .nav {
@@ -862,18 +869,20 @@ main {
 
     .header {
         &__heading {
-            min-width: 15%;
+            min-width: 10%;
+            max-width: 15%;
         }
     }
 
     .location{
+        justify-content: space-around;
         font-size: 30px;
         &__text {
             font-size: 30px;
         }
         &__icon {
-            margin-left: 39%;
-            margin-right: 100px;
+            margin-left: 0;
+            margin-right: 25%;
         }
     }
 
@@ -890,7 +899,7 @@ main {
 
     .base-btn {
         > p {
-            font-size: 25px;
+            font-size: 26px;
         }
     }
 
@@ -943,7 +952,10 @@ main {
     }
 
     .section-tutorial {
-        margin-bottom: 0;
+        margin-bottom: 50px;
+        &__title {
+            margin-bottom: 40px;
+        }
     }
 
     .tutorial-list {
@@ -951,14 +963,16 @@ main {
         justify-content: space-between;
         &__entry {
             min-width: 30%;
+            height: 60px;
             margin: 0;
             padding: 0;
         }
         &__card {
             max-width: 90%;
+            min-height: 100%;
             &__text{
                 font-size: 20px;
-                margin: 0 0;
+                margin: 0 10px;
             }
             &__icon {
                 font-size: 25px;
@@ -967,10 +981,10 @@ main {
             }
         }
         &__number-bubble {
-            width: 40px;
-            height: 40px;
+            width: 30px;
+            height: 30px;
             > p {
-                font-size: 25px;
+                font-size: 100%;
             }
         }
     }
@@ -982,36 +996,34 @@ main {
         flex-wrap: wrap;
         padding: 0 30px;
         &__title {
+            margin: 50px 0;
             min-width: 100%;
         }
     }
 
     .restaurant-card {
         width: 30%;
-        &__new {
-            left: 0;
-            > p {
-                font-size: 15px;
-            }
-        }
         &__image {
-            max-height: 190px;
+            max-height: 180px;
         }
         &__info {
+            margin-left: 10px;
             &__title {
-                font-size: 25px;
-            }
-            &__location {
                 font-size: 20px;
             }
+            &__location {
+                font-size: 18px;
+            }
             > i {
-                font-size: 35px;
-                bottom: 70px;
+                font-size: 25px;
+                margin-right: 15px;
+                bottom: 15%;
             }
         }
     }
 
     .footer {
+        padding: 40px;
         &__icon {
             max-width: 10px;
             font-size: 15px;
