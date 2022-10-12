@@ -222,7 +222,7 @@ body {
   margin-bottom: 10px;
 }
 .nav__icon {
-  font-size: 12px;
+  font-size: 22px;
   color: #353535;
 }
 .nav__homepage-link {
@@ -252,7 +252,7 @@ main {
 .menu-background-image {
   -o-object-fit: cover;
      object-fit: cover;
-  height: 725px;
+  height: 30vh;
 }
 .menu-background-image__offset {
   -o-object-position: 0 70%;
@@ -264,11 +264,11 @@ main {
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 0 50px;
-  border-top-left-radius: 100px;
-  border-top-right-radius: 100px;
+  padding: 10px 20px;
+  border-top-left-radius: 40px;
+  border-top-right-radius: 40px;
   background-color: #f6f6f6;
-  margin-top: -100px;
+  margin-top: -40px;
 }
 .section-menu__head {
   position: relative;
@@ -280,11 +280,11 @@ main {
 .section-menu__head > div {
   display: flex;
   align-items: center;
-  font-size: 12px;
-  margin-right: 100px;
+  font-size: 28px;
+  margin-right: 15%;
 }
 .section-menu__title {
-  font-size: 12px;
+  font-size: 28px;
   font-weight: 100;
 }
 .section-menu__favourite {
@@ -306,12 +306,12 @@ main {
   opacity: 100%;
 }
 .section-menu__order {
-  padding: 0 75px;
-  font-size: 12px;
+  padding: 0 25px;
+  font-size: 14px;
 }
 .section-menu > .base-btn {
-  margin-top: 100px;
-  margin-bottom: 175px;
+  margin-top: 40px;
+  margin-bottom: 50px;
 }
 
 .menu-step {
@@ -319,22 +319,23 @@ main {
 }
 .menu-step__title {
   font-weight: 400;
-  font-size: 12px;
+  font-size: 18px;
 }
 .menu-step__underline {
   position: relative;
-  border-bottom: 8px solid #99e2d0;
-  width: 100px;
+  border-bottom: 2px solid #99e2d0;
+  width: 13%;
   height: 0;
-  margin-top: -20px;
+  margin-top: -10px;
+  margin-bottom: 12px;
 }
 
 .menu-card {
   -webkit-animation: ease-out 0s 1 slideAndFadeIn;
           animation: ease-out 0s 1 slideAndFadeIn;
   background-color: white;
-  border-radius: 40px;
-  margin: 40px 0;
+  border-radius: 15px;
+  margin: 12px 0;
   display: flex;
   align-items: center;
   width: 100%;
@@ -342,21 +343,21 @@ main {
   box-shadow: 0 5px 10px 1px rgba(0, 0, 0, 0.1);
 }
 .menu-card__text {
-  margin: 30px 0;
+  margin: 10px 0;
   transition: width 0.3s ease-in-out;
-  padding-left: 30px;
+  padding-left: 10px;
   width: 80%;
   display: flex;
   flex-direction: column;
 }
 .menu-card__text__dish {
-  font-size: 12px;
+  font-size: 18px;
   font-weight: 700;
   margin: 0;
   margin-bottom: 5px;
 }
 .menu-card__text__detail {
-  font-size: 12px;
+  font-size: 14px;
   font-weight: 400;
   margin: 0;
   margin-top: 5px;
@@ -371,7 +372,7 @@ main {
   justify-content: center;
 }
 .menu-card__price > p {
-  font-size: 12px;
+  font-size: 18px;
   font-weight: 700;
   color: #353535;
   margin: 0;
@@ -384,16 +385,16 @@ main {
   transition: width 0.3s ease-in-out;
   width: 0%;
   align-self: stretch;
-  border-top-right-radius: 40px;
-  border-bottom-right-radius: 40px;
+  border-top-right-radius: 15px;
+  border-bottom-right-radius: 15px;
   background-color: #99e2d0;
 }
 .menu-card__validate__circle {
   transition: all 0s;
   transform: rotate(0deg);
   background-color: white;
-  height: 60px;
-  width: 60px;
+  height: 1.8em;
+  width: 1.8em;
   border-radius: 50%;
   display: flex;
   justify-content: center;
@@ -402,7 +403,7 @@ main {
   color: #99e2d0;
 }
 .menu-card__validate__icon {
-  font-size: 40px;
+  font-size: 125%;
 }
 .menu-card:hover > .menu-card__text {
   width: 60%;
@@ -502,6 +503,7 @@ main {
 }
 .explore__text {
   font-weight: 200;
+  margin: 10px 18px;
 }
 
 /* Fin Section Explore */
@@ -716,6 +718,9 @@ main {
   .header__heading {
     width: 25%;
   }
+  .header__heading-menu {
+    min-width: 25%;
+  }
   .location {
     font-size: 24px;
   }
@@ -752,13 +757,13 @@ main {
     width: 70%;
   }
   .section-menu__title {
-    font-size: 45px;
+    font-size: 32px;
   }
   .section-menu__favourite {
-    font-size: 45px;
+    font-size: 38px;
   }
   .section-menu__favourited {
-    font-size: 45px;
+    font-size: 38px;
   }
   .section-menu__head > div {
     margin-right: 60px;
@@ -772,19 +777,16 @@ main {
     font-size: 30px;
   }
   .menu-step__underline {
-    border-width: 5px;
-  }
-  .menu-card {
-    margin: 15px 0;
+    border-width: 3px;
   }
   .menu-card__text__dish {
-    font-size: 28px;
+    font-size: 22px;
   }
   .menu-card__text__detail {
-    font-size: 26px;
+    font-size: 20px;
   }
   .menu-card__price > p {
-    font-size: 24px;
+    font-size: 26px;
   }
   .menu-card__validate__circle {
     height: 40px;
@@ -920,9 +922,11 @@ main {
   }
   .menu-card__text__detail {
     font-size: 16px;
+    overflow: visible;
+    white-space: unset;
   }
   .menu-card__price > p {
-    font-size: 24px;
+    font-size: 20px;
   }
   .section-tutorial {
     margin-bottom: 50px;
