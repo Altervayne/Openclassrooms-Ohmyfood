@@ -997,8 +997,7 @@ main {
 
     .section-restaurants {
         display: flex;
-        justify-content: space-around;
-        align-items: center;
+        justify-content: space-between;
         flex-wrap: wrap;
         padding: 0 30px;
         &__title {
@@ -1008,7 +1007,8 @@ main {
     }
 
     .restaurant-card {
-        width: 30%;
+        width: 20%;
+        min-width: 275px;
         &__image {
             max-height: 180px;
         }
