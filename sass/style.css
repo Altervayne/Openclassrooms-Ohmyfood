@@ -23,19 +23,6 @@
   src: url("./fonts/Roboto-Black.ttf");
   font-weight: 900;
 }
-@-webkit-keyframes slideAndFadeIn {
-  0% {
-    transform: translateY(100%);
-    opacity: 0%;
-  }
-  50% {
-    opacity: 0%;
-  }
-  100% {
-    transform: translateY(0%);
-    opacity: 100%;
-  }
-}
 @keyframes slideAndFadeIn {
   0% {
     transform: translateY(100%);
@@ -47,21 +34,6 @@
   100% {
     transform: translateY(0%);
     opacity: 100%;
-  }
-}
-@-webkit-keyframes disappearDiv {
-  0% {
-    z-index: 100;
-  }
-  90% {
-    z-index: 100;
-    visibility: visible;
-    opacity: 100%;
-  }
-  100% {
-    z-index: -1;
-    visibility: hidden;
-    opacity: 0%;
   }
 }
 @keyframes disappearDiv {
@@ -77,19 +49,6 @@
     z-index: -1;
     visibility: hidden;
     opacity: 0%;
-  }
-}
-@-webkit-keyframes rotatingSpinner {
-  0% {
-    transform: rotate(45deg);
-  }
-  90% {
-    transform: rotate(765deg);
-    visibility: visible;
-  }
-  100% {
-    transform: rotate(400deg);
-    visibility: hidden;
   }
 }
 @keyframes rotatingSpinner {
@@ -167,8 +126,7 @@ body {
 
 /* Début Loading */
 .loading-div {
-  -webkit-animation: 3s linear 1 disappearDiv;
-          animation: 3s linear 1 disappearDiv;
+  animation: 3s linear 1 disappearDiv;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -181,8 +139,7 @@ body {
   z-index: -3;
 }
 .loading-div__spinner {
-  -webkit-animation: 3s ease-in-out 1 rotatingSpinner;
-          animation: 3s ease-in-out 1 rotatingSpinner;
+  animation: 3s ease-in-out 1 rotatingSpinner;
   align-self: center;
   font-size: 120px;
   width: auto;
@@ -331,8 +288,7 @@ main {
 }
 
 .menu-card {
-  -webkit-animation: ease-out 0s 1 slideAndFadeIn;
-          animation: ease-out 0s 1 slideAndFadeIn;
+  animation: ease-out 0s 1 slideAndFadeIn;
   background-color: white;
   border-radius: 15px;
   margin: 12px 0;
@@ -417,48 +373,39 @@ main {
 }
 
 .menu-step-animate__four > div:nth-child(2) {
-  -webkit-animation-duration: 0.4s;
-          animation-duration: 0.4s;
+  animation-duration: 0.4s;
 }
 
 .menu-step-animate__four > div:nth-child(3) {
-  -webkit-animation-duration: 0.6s;
-          animation-duration: 0.6s;
+  animation-duration: 0.6s;
 }
 
 .menu-step-animate__four > div:nth-child(4) {
-  -webkit-animation-duration: 0.8s;
-          animation-duration: 0.8s;
+  animation-duration: 0.8s;
 }
 
 .menu-step-animate__four > div:nth-child(5) {
-  -webkit-animation-duration: 1s;
-          animation-duration: 1s;
+  animation-duration: 1s;
 }
 
 .menu-step-animate__four > div:nth-child(6) {
-  -webkit-animation-duration: 1.2s;
-          animation-duration: 1.2s;
+  animation-duration: 1.2s;
 }
 
 .menu-step-animate__three > div:nth-child(2) {
-  -webkit-animation-duration: 0.4s;
-          animation-duration: 0.4s;
+  animation-duration: 0.4s;
 }
 
 .menu-step-animate__three > div:nth-child(3) {
-  -webkit-animation-duration: 0.6s;
-          animation-duration: 0.6s;
+  animation-duration: 0.6s;
 }
 
 .menu-step-animate__three > div:nth-child(4) {
-  -webkit-animation-duration: 0.8s;
-          animation-duration: 0.8s;
+  animation-duration: 0.8s;
 }
 
 .menu-step-animate__three > div:nth-child(5) {
-  -webkit-animation-duration: 1s;
-          animation-duration: 1s;
+  animation-duration: 1s;
 }
 
 /* Fin Section Menu */
@@ -903,7 +850,9 @@ main {
     font-size: 22px;
   }
   .menu-step {
-    width: 30%;
+    box-sizing: border-box;
+    width: 33%;
+    padding: 0 2%;
   }
   .menu-step__title {
     font-size: 24px;
